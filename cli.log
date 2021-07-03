@@ -1,0 +1,375 @@
+user@node1:~$ sudo -i
+root@node1:~# apt update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:2 http://mirrors.digitalocean.com/ubuntu focal InRelease [265 kB]
+Get:3 http://mirrors.digitalocean.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://mirrors.digitalocean.com/ubuntu focal-backports InRelease [101 kB]
+Get:5 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 Packages [1081 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [741 kB]
+Get:7 http://mirrors.digitalocean.com/ubuntu focal-updates/main Translation-en [238 kB]
+Get:8 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 c-n-f Metadata [13.6 kB]
+Get:9 http://mirrors.digitalocean.com/ubuntu focal-updates/restricted amd64 Packages [318 kB]
+Get:10 http://mirrors.digitalocean.com/ubuntu focal-updates/restricted Translation-en [46.1 kB]
+Get:11 http://mirrors.digitalocean.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [456 B]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [146 kB]
+Get:13 http://mirrors.digitalocean.com/ubuntu focal-updates/universe amd64 Packages [831 kB]       
+Get:14 http://mirrors.digitalocean.com/ubuntu focal-updates/universe Translation-en [174 kB]                        
+Get:15 http://mirrors.digitalocean.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [18.0 kB]                  
+Get:16 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [7956 B]
+Get:17 http://mirrors.digitalocean.com/ubuntu focal-updates/multiverse amd64 Packages [23.6 kB]
+Get:18 http://mirrors.digitalocean.com/ubuntu focal-updates/multiverse Translation-en [6472 B]
+Get:19 http://mirrors.digitalocean.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [648 B]
+Get:20 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [282 kB]
+Get:21 http://mirrors.digitalocean.com/ubuntu focal-backports/main amd64 Packages [2568 B]
+Get:22 http://mirrors.digitalocean.com/ubuntu focal-backports/main Translation-en [1120 B]
+Get:23 http://mirrors.digitalocean.com/ubuntu focal-backports/main amd64 c-n-f Metadata [400 B]
+Get:24 http://mirrors.digitalocean.com/ubuntu focal-backports/universe amd64 Packages [5788 B]
+Get:25 http://mirrors.digitalocean.com/ubuntu focal-backports/universe Translation-en [2060 B]
+Get:26 http://mirrors.digitalocean.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [288 B]
+Get:27 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [40.9 kB]
+Get:28 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [456 B]
+Get:29 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [628 kB]
+Get:30 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [95.9 kB]
+Get:31 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [11.6 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [19.9 kB]
+Get:33 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [4316 B]
+Get:34 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [528 B]
+Fetched 5335 kB in 3s (2018 kB/s) 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+154 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+root@node1:~# apt-get install \
+>     apt-transport-https \
+>     ca-certificates \
+>     curl \
+>     gnupg \
+>     lsb-release
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+lsb-release is already the newest version (11.1.0ubuntu2).
+lsb-release set to manually installed.
+gnupg is already the newest version (2.2.19-3ubuntu2.1).
+gnupg set to manually installed.
+The following additional packages will be installed:
+  libcurl4
+The following NEW packages will be installed:
+  apt-transport-https
+The following packages will be upgraded:
+  ca-certificates curl libcurl4
+3 upgraded, 1 newly installed, 0 to remove and 151 not upgraded.
+Need to get 546 kB of archives.
+After this operation, 161 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 ca-certificates all 20210119~20.04.1 [146 kB]
+Get:2 http://mirrors.digitalocean.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.6 [4680 B]
+Get:3 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.5 [161 kB]
+Get:4 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.5 [234 kB]
+Fetched 546 kB in 0s (2199 kB/s)
+Preconfiguring packages ...
+(Reading database ... 63480 files and directories currently installed.)
+Preparing to unpack .../ca-certificates_20210119~20.04.1_all.deb ...
+Unpacking ca-certificates (20210119~20.04.1) over (20190110ubuntu1.1) ...
+Selecting previously unselected package apt-transport-https.
+Preparing to unpack .../apt-transport-https_2.0.6_all.deb ...
+Unpacking apt-transport-https (2.0.6) ...
+Preparing to unpack .../curl_7.68.0-1ubuntu2.5_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.5) over (7.68.0-1ubuntu2.2) ...
+Preparing to unpack .../libcurl4_7.68.0-1ubuntu2.5_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.5) over (7.68.0-1ubuntu2.2) ...
+Setting up apt-transport-https (2.0.6) ...
+Setting up ca-certificates (20210119~20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+21 added, 19 removed; done.
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.5) ...
+Setting up curl (7.68.0-1ubuntu2.5) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+Processing triggers for ca-certificates (20210119~20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+
+root@node1:~# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+root@node1:~# echo \
+>   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+>   $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+root@node1:~# apt update
+Get:1 https://download.docker.com/linux/ubuntu focal InRelease [52.1 kB]
+Get:2 http://mirrors.digitalocean.com/ubuntu focal InRelease [265 kB]                                   
+Get:3 https://download.docker.com/linux/ubuntu focal/stable arm64 Packages [9534 B]
+Hit:4 http://security.ubuntu.com/ubuntu focal-security InRelease                
+Hit:5 http://mirrors.digitalocean.com/ubuntu focal-updates InRelease
+Hit:6 http://mirrors.digitalocean.com/ubuntu focal-backports InRelease
+Fetched 327 kB in 1s (621 kB/s)
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+151 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+root@node1:~# apt install docker-ce docker-ce-cli containerd.io
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  docker-ce-rootless-extras docker-scan-plugin pigz slirp4netns
+Suggested packages:
+  aufs-tools cgroupfs-mount | cgroup-lite
+The following NEW packages will be installed:
+  containerd.io docker-ce docker-ce-cli docker-ce-rootless-extras docker-scan-plugin pigz slirp4netns
+0 upgraded, 7 newly installed, 0 to remove and 151 not upgraded.
+Need to get 108 MB of archives.
+After this operation, 466 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.4.6-1 [28.3 MB]
+Get:2 http://mirrors.digitalocean.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:3 http://mirrors.digitalocean.com/ubuntu focal/universe amd64 slirp4netns amd64 0.4.3-1 [74.3 kB]
+Get:4 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-cli amd64 5:20.10.7~3-0~ubuntu-focal [41.4 MB]
+Get:5 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:20.10.7~3-0~ubuntu-focal [24.8 MB]
+Get:6 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-rootless-extras amd64 5:20.10.7~3-0~ubuntu-focal [9063 kB]
+Get:7 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-scan-plugin amd64 0.8.0~ubuntu-focal [3889 kB]
+Fetched 108 MB in 1s (80.4 MB/s)         
+Selecting previously unselected package pigz.
+(Reading database ... 63486 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../1-containerd.io_1.4.6-1_amd64.deb ...
+Unpacking containerd.io (1.4.6-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../2-docker-ce-cli_5%3a20.10.7~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce-cli (5:20.10.7~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../3-docker-ce_5%3a20.10.7~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce (5:20.10.7~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-ce-rootless-extras.
+Preparing to unpack .../4-docker-ce-rootless-extras_5%3a20.10.7~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce-rootless-extras (5:20.10.7~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-scan-plugin.
+Preparing to unpack .../5-docker-scan-plugin_0.8.0~ubuntu-focal_amd64.deb ...
+Unpacking docker-scan-plugin (0.8.0~ubuntu-focal) ...
+Selecting previously unselected package slirp4netns.
+Preparing to unpack .../6-slirp4netns_0.4.3-1_amd64.deb ...
+Unpacking slirp4netns (0.4.3-1) ...
+Setting up slirp4netns (0.4.3-1) ...
+Setting up docker-scan-plugin (0.8.0~ubuntu-focal) ...
+Setting up containerd.io (1.4.6-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker-ce-cli (5:20.10.7~3-0~ubuntu-focal) ...
+Setting up pigz (2.4-1) ...
+Setting up docker-ce-rootless-extras (5:20.10.7~3-0~ubuntu-focal) ...
+Setting up docker-ce (5:20.10.7~3-0~ubuntu-focal) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.2) ...
+
+root@node1:~# curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   633  100   633    0     0  33315      0 --:--:-- --:--:-- --:--:-- 33315
+100 12.1M  100 12.1M    0     0  18.6M      0 --:--:-- --:--:-- --:--:-- 24.0M
+root@node1:~# chmod +x /usr/local/bin/docker-compose
+root@node1:~# docker-compose --version
+docker-compose version 1.29.2, build 5becea4c
+
+root@node1:~# mkdir my_wordpress
+
+root@node1:~# cd my_wordpress/
+
+root@node1:~/my_wordpress# nano docker-compose.yml
+
+root@node1:~/my_wordpress# docker-compose up -d
+
+Creating network "my_wordpress_default" with the default driver
+Creating volume "my_wordpress_db_data" with default driver
+Creating volume "my_wordpress_wordpress_data" with default driver
+Pulling db (mysql:5.7)...
+5.7: Pulling from library/mysql
+b4d181a07f80: Pull complete
+a462b60610f5: Pull complete
+578fafb77ab8: Pull complete
+524046006037: Pull complete
+d0cbe54c8855: Pull complete
+aa18e05cc46d: Pull complete
+32ca814c833f: Pull complete
+52645b4af634: Pull complete
+bca6a5b14385: Pull complete
+309f36297c75: Pull complete
+7d75cacde0f8: Pull complete
+Digest: sha256:1a2f9cd257e75cc80e9118b303d1648366bc2049101449bf2c8d82b022ea86b7
+Status: Downloaded newer image for mysql:5.7
+Pulling wordpress (wordpress:latest)...
+latest: Pulling from library/wordpress
+b4d181a07f80: Already exists
+78b85dd8f014: Pull complete
+8589b26a90be: Pull complete
+f5af5d641946: Pull complete
+614ec6f0b8d6: Pull complete
+12b28f3797fb: Pull complete
+96bcb7d2e6b0: Pull complete
+09a46dfaa772: Pull complete
+1a85b508a14e: Pull complete
+c6fd9c89235a: Pull complete
+40b955b2d455: Pull complete
+fda03b9af7e2: Pull complete
+570ea029c915: Pull complete
+a3f5858f9e8b: Pull complete
+e563e5b2630b: Pull complete
+10499c79181c: Pull complete
+7180626436df: Pull complete
+72df520dac82: Pull complete
+ed2d407056b5: Pull complete
+7224b35f0930: Pull complete
+7bf10a169530: Pull complete
+Digest: sha256:0a2b70369b24a45802e33d5870638bac3c7f289dfcb0d0a9b6e9990c0a217c27
+Status: Downloaded newer image for wordpress:latest
+Creating my_wordpress_db_1 ... done
+Creating my_wordpress_wordpress_1 ... done
+root@node1:~/my_wordpress# cd
+
+root@node1:~# docker run \
+>   --volume=/:/rootfs:ro \
+>   --volume=/var/run:/var/run:ro \
+>   --volume=/sys:/sys:ro \
+>   --volume=/var/lib/docker/:/var/lib/docker:ro \
+>   --volume=/dev/disk/:/dev/disk:ro \
+>   --publish=8080:8080 \
+>   --detach=true \
+>   --name=cadvisor \
+>   --privileged \
+>   --device=/dev/kmsg \
+>   gcr.io/cadvisor/cadvisor:v0.39.2
+Unable to find image 'gcr.io/cadvisor/cadvisor:v0.39.2' locally
+v0.39.2: Pulling from cadvisor/cadvisor
+339de151aab4: Pull complete 
+ee94623f4d1c: Pull complete 
+14c73469ff87: Pull complete 
+2df22c6b8a64: Pull complete 
+8661234b1461: Pull complete 
+Digest: sha256:77d1df2341c420adde2282ec06b281d704d3f73e4fe9d56c5120c05353758d03
+Status: Downloaded newer image for gcr.io/cadvisor/cadvisor:v0.39.2
+373ca11bd7db3b02d7044dcfc0aaa4dfc203f9a925c55b5098481166bc4305fa
+
+root@node1:~# docker ps
+CONTAINER ID   IMAGE                              COMMAND                  CREATED              STATUS                        PORTS                                       NAMES
+373ca11bd7db   gcr.io/cadvisor/cadvisor:v0.39.2   "/usr/bin/cadvisor -…"   About a minute ago   Up About a minute (healthy)   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   cadvisor
+16d4b32f7c0f   wordpress:latest                   "docker-entrypoint.s…"   6 minutes ago        Up 6 minutes                  0.0.0.0:8000->80/tcp, :::8000->80/tcp       my_wordpress_wordpress_1
+3158a0eff042   mysql:5.7                          "docker-entrypoint.s…"   6 minutes ago        Up 6 minutes                  3306/tcp, 33060/tcp                         my_wordpress_db_1
+
+root@node1:~# docker exec -it my_wordpress_db_1 bash
+
+root@3158a0eff042:/# mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 7
+Server version: 5.7.34 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE USER 'exporter'@'%' IDENTIFIED BY 'password' WITH MAX_USER_CONNECTIONS 3;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'exporter'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> ^DBye
+
+root@3158a0eff042:/# exit
+
+root@node1:~# cd my_wordpress/
+
+root@node1:~/my_wordpress# nano docker-compose.yml 
+
+root@node1:~/my_wordpress# docker-compose up -d
+Recreating my_wordpress_db_1 ... done
+my_wordpress_wordpress_1 is up-to-date
+root@node1:~/my_wordpress# cd
+
+root@node1:~# cd /opt/
+
+root@node1:/opt# wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0/mysqld_exporter-0.13.0.linux-amd64.tar.gz
+--2021-07-03 09:59:32--  https://github.com/prometheus/mysqld_exporter/releases/download/v0.13.0/mysqld_exporter-0.13.0.linux-amd64.tar.gz
+Resolving github.com (github.com)... 140.82.121.4
+Connecting to github.com (github.com)|140.82.121.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/32075541/da61fa80-c1f3-11eb-8ada-b73911ec635c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210703%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210703T095932Z&X-Amz-Expires=300&X-Amz-Signature=e9c9c1eeefeafa234ebabbf3801d3311f7a9e00f2dd59820b840f2dc25ed6306&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=32075541&response-content-disposition=attachment%3B%20filename%3Dmysqld_exporter-0.13.0.linux-amd64.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-07-03 09:59:32--  https://github-releases.githubusercontent.com/32075541/da61fa80-c1f3-11eb-8ada-b73911ec635c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210703%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210703T095932Z&X-Amz-Expires=300&X-Amz-Signature=e9c9c1eeefeafa234ebabbf3801d3311f7a9e00f2dd59820b840f2dc25ed6306&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=32075541&response-content-disposition=attachment%3B%20filename%3Dmysqld_exporter-0.13.0.linux-amd64.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.110.154, 185.199.109.154, 185.199.111.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.110.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 7242382 (6.9M) [application/octet-stream]
+Saving to: ‘mysqld_exporter-0.13.0.linux-amd64.tar.gz’
+
+mysqld_exporter-0.13.0.linux-amd64. 100%[===================================================================>]   6.91M  --.-KB/s    in 0.1s    
+
+2021-07-03 09:59:33 (55.5 MB/s) - ‘mysqld_exporter-0.13.0.linux-amd64.tar.gz’ saved [7242382/7242382]
+
+root@node1:/opt# tar xzf mysqld_exporter-0.13.0.linux-amd64.tar.gz 
+root@node1:/opt# rm mysqld_exporter-0.13.0.linux-amd64.tar.gz 
+root@node1:/opt# mv mysqld_exporter-0.13.0.linux-amd64 mysqld_exporter
+
+root@node1:/opt# useradd -s /bin/false -d /opt/prometheus prometheus
+
+root@node1:/opt# nano /etc/systemd/system/mysqld_exporter.service
+root@node1:/opt# systemctl daemon-reload 
+root@node1:/opt# systemctl enable mysqld_exporter.service 
+Created symlink /etc/systemd/system/default.target.wants/mysqld_exporter.service → /etc/systemd/system/mysqld_exporter.service.
+root@node1:/opt# systemctl start mysqld_exporter.service
+
+root@node1:/opt# systemctl status mysqld_exporter.service 
+● mysqld_exporter.service - MySQL Exporter
+     Loaded: loaded (/etc/systemd/system/mysqld_exporter.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2021-07-03 10:09:54 UTC; 4s ago
+   Main PID: 13269 (mysqld_exporter)
+      Tasks: 3 (limit: 2345)
+     Memory: 1.5M
+     CGroup: /system.slice/mysqld_exporter.service
+             └─13269 /opt/mysqld_exporter/mysqld_exporter
+
+root@node1:/opt# wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+--2021-07-03 10:11:03--  https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+Resolving github.com (github.com)... 140.82.121.4
+Connecting to github.com (github.com)|140.82.121.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/9524057/715b1a00-7d9f-11eb-8cfa-533c911cfe9a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210703%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210703T100925Z&X-Amz-Expires=300&X-Amz-Signature=1ef899d8a221851efd3dabacd6bfe0a2713b54e58d9cc5ff51e214b00baf26a5&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=9524057&response-content-disposition=attachment%3B%20filename%3Dnode_exporter-1.1.2.linux-amd64.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2021-07-03 10:11:03--  https://github-releases.githubusercontent.com/9524057/715b1a00-7d9f-11eb-8cfa-533c911cfe9a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210703%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210703T100925Z&X-Amz-Expires=300&X-Amz-Signature=1ef899d8a221851efd3dabacd6bfe0a2713b54e58d9cc5ff51e214b00baf26a5&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=9524057&response-content-disposition=attachment%3B%20filename%3Dnode_exporter-1.1.2.linux-amd64.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.110.154, 185.199.109.154, 185.199.111.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.110.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9246179 (8.8M) [application/octet-stream]
+Saving to: ‘node_exporter-1.1.2.linux-amd64.tar.gz’
+
+node_exporter-1.1.2.linux-amd64.tar 100%[===================================================================>]   8.82M  16.0MB/s    in 0.6s    
+
+2021-07-03 10:11:04 (16.0 MB/s) - ‘node_exporter-1.1.2.linux-amd64.tar.gz’ saved [9246179/9246179]
+
+root@node1:/opt# tar xzf node_exporter-1.1.2.linux-amd64.tar.gz 
+root@node1:/opt# rm node_exporter-1.1.2.linux-amd64.tar.gz 
+root@node1:/opt# mv node_exporter-1.1.2.linux-amd64 node_exporter
+root@node1:/opt# chown -R prometheus:prometheus node_exporter
+root@node1:/opt# cp /etc/systemd/system/mysqld_exporter.service /etc/systemd/system/node_exporter.service 
+root@node1:/opt# nano /etc/systemd/system/node_exporter.service
+root@node1:/opt# systemctl daemon-reload 
+root@node1:/opt# systemctl enable node_exporter.service
+Created symlink /etc/systemd/system/default.target.wants/node_exporter.service → /etc/systemd/system/node_exporter.service.
+root@node1:/opt# systemctl start node_exporter.service 
+root@node1:/opt# systemctl status node_exporter.service 
+● node_exporter.service - Node Exporter
+     Loaded: loaded (/etc/systemd/system/node_exporter.service; disabled; vendor preset: enabled)
+     Active: active (running) since Sat 2021-07-03 10:12:54 UTC; 4s ago
+   Main PID: 13538 (node_exporter)
+      Tasks: 3 (limit: 2345)
+     Memory: 2.0M
+     CGroup: /system.slice/node_exporter.service
+             └─13538 /opt/node_exporter/node_exporter
+
